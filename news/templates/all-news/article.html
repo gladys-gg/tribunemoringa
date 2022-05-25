@@ -1,0 +1,26 @@
+    {%extends 'all-news/base.html'%}
+
+    {% block content %}
+
+    <div class="container">
+
+    <div class="row">
+        <div class="col-md-3">
+        <img src="{{article.article_image.url}}"  class="img-responsive" alt="">
+        </div>
+    
+
+    <div class="col-md-8">
+        <h1 class="text-center">{{article.title}}</h1>
+        <p>{{article.post}}</p>
+        <p class="text-muted">Posted {{article.pub_date|timesince}} by {{article.editor.first_name}}</p>
+    </div>
+
+    
+    </div>
+
+
+
+    </div>
+
+    {% endblock %}
